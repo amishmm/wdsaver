@@ -1,0 +1,30 @@
+Compiling:
+----------
+cc wdsaver.c -o wdsaver
+
+Usage:
+------
+Run:
+./wdsaver -h
+
+Testing: (as root)
+--------
+(assuming defaults parameters being used)
+1) Select timeout say 40 seconds
+2) Do a test (non-live mode) run:
+   ./wdparm -t 40 -v
+3) Check the output i.e. functioning of program
+4) Once satisfied, put in live mode and test again:
+   ./wdparm -t 40 -v -l
+5) Check the output i.e. functioning of program
+
+Installing: (as root)
+-----------
+1) Once satisfied with testing, copy the file to /usr/bin
+   cp -i ./wdsaver /usr/bin; chmod 700 /usr/bin/wdsaver
+2) Put the following in rc.local of your system startup:
+   /usr/bin/wdsaver -t 40 -l -b
+
+
+
+Enjoy, the safety of your drive and drive safely!
