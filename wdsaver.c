@@ -81,7 +81,7 @@ void process(void)
             }
             else if (!idlestate) {
                 idlestate = 1;
-                if (verbosemode) fprintf (stderr, "Inactivity period parking allowed\n");
+                if (verbosemode) fprintf (stderr, "Inactivity timeout reached, parking allowed\n");
             }
         }
     }
