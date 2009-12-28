@@ -197,10 +197,10 @@ void print_usage(int argc, char **argv)
     fprintf (stderr, "  -d: harddisk device (default=%s)\n", DEFAULT_HD_DEVICE);
     fprintf (stderr, "  -f: /sys format stats file for harddisk device (default=%s)\n", DEFAULT_HD_STATS_FILE);
     fprintf (stderr, "  -m: method to use (number) to reset timer\n");
-    fprintf (stderr, "      %d = random read from disk*\n", WD_RESET_METHOD_RANDOM_READ);
-    fprintf (stderr, "      %d = hdparm -B option**\n", WD_RESET_METHOD_HDPARM);
-    fprintf (stderr, "       * = (default) read only method but disk head moves frequently\n");
-    fprintf (stderr, "      ** = frequently writes disk attribute using hdparm\n");
+    fprintf (stderr, "      %d = random read from disk\n", WD_RESET_METHOD_RANDOM_READ);
+    fprintf (stderr, "          (default) read only method but disk head moves frequently\n");
+    fprintf (stderr, "      %d = hdparm -B option\n", WD_RESET_METHOD_HDPARM);
+    fprintf (stderr, "          frequently writes disk attribute using hdparm\n");
     fprintf (stderr, "  -l: activate live mode (program doesn't really reset timer otherwise)\n");
     fprintf (stderr, "  -b: fork and go into background mode\n");
     fprintf (stderr, "  -v: verbose mode (to stderr) (on by default if NOT in livemode)\n");
