@@ -97,6 +97,7 @@ void wd_reset_random_read(void)
     static long maxrandom = 1024*1024*1024;//we assume HD has atleast 1GB capacity
     if (livemode) {
         if (hd_fd < 0) {
+            /* we can use O_DIRECT but seeks are random, READ would rarely come from cache */
             if ((hd_fd = open (hd_device, O_RDONLY)) < 0) {
                 fprintf (stderr, "Can't read from device %s\n", hd_device);
                 return;
