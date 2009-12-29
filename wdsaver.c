@@ -183,7 +183,7 @@ void init(int argc, char **argv)
         setsid();
     }
 
-    snprintf (wdreset_command, 1024, "%s -B %d '%s'", HDPARM_PROG, hdparm_optB, hd_device);
+    snprintf (wdreset_command, 1024, "%s -q -B %d '%s'", HDPARM_PROG, hdparm_optB, hd_device);
     if (verbosemode && wd_reset_method==WD_RESET_METHOD_HDPARM) fprintf (stderr, "WD reset command: %s\n", wdreset_command);
 }
 
