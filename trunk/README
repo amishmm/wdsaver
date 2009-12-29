@@ -1,11 +1,14 @@
 Compiling:
 ----------
-cc wdsaver.c -o wdsaver
+run:
+  make
+   OR
+  cc wdsaver.c -o wdsaver
 
 Usage:
 ------
 Run:
-./wdsaver -h
+  ./wdsaver -h
 
 Testing: (as root)
 --------
@@ -20,7 +23,10 @@ Testing: (as root)
 
 Installing: (as root)
 -----------
-1) Once satisfied with testing, copy the file to /usr/bin
+1) Once satisfied with testing, run
+   make install
+    OR
+   copy the file to /usr/bin
    cp -i ./wdsaver /usr/bin; chmod 700 /usr/bin/wdsaver
 2) Put the following in rc.local of your system startup:
    /usr/bin/wdsaver -t 40 -l -b
@@ -46,4 +52,4 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 Credits:
 --------
 amish - author
-blackshard for hdparm trick
+blackshard for alternative hdparm trick
