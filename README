@@ -21,6 +21,14 @@ Testing: (as root)
    ./wdparm -t 40 -v -l
 5) Check the output i.e. functioning of program
 
+TIP:
+----
+For 'random read' method (see usage), if your most active partition
+on the drive is /dev/sda3 (say /home or just /) then it would be
+nice idea to specify it as a device (-d option) to read from.
+
+That should reduce head movement away from the active partition.
+
 Installing: (as root)
 -----------
 1) Once satisfied with testing, run
