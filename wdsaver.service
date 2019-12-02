@@ -1,5 +1,5 @@
 [Unit]
-Description=Stop hard drive from too frequent head parking
+Description=Prevent hard drive from too frequent head parking
 After=network.target
 
 [Service]
