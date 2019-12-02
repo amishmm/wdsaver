@@ -1,0 +1,10 @@
+[Unit]
+Description=Stop hard drive from too frequent head parking
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/wdsaver -t 40 -d /dev/sda7 -l
+
+[Install]
+WantedBy=multi-user.target 
